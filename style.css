@@ -1,0 +1,56 @@
+body {
+  margin-top: 300px;
+  width: 100%;
+  height: 100%;
+  background: rgb(49, 47, 47);
+  font-family: "Varela Round", sans-serif;
+}
+nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 600px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+nav a {
+  text-decoration: none;
+  font-size: 30px;
+  color: rgb(223, 219, 219);
+  position: relative;
+  margin-bottom: 50px;
+  transition: all 0.2s;
+  overflow: hidden;
+}
+
+nav a::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgb(242, 49, 49);
+  transition: all 0.4s;
+}
+nav a:hover::before {
+  left: 100%;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  margin-top: 10px;
+  left: 100%;
+  width: 100%;
+  height: 4px;
+  background: rgb(242, 49, 49);
+  transition: all 0.3s;
+  transition-delay: 0.4s;
+}
+nav a:hover::after {
+  left: 0%;
+}
